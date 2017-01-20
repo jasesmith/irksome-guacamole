@@ -1,0 +1,11 @@
+// important interactions
+[swiper] {
+  transform: translate3d(0%, 0%, 0);
+  &:not(.dragging) {
+    transition: transform 300ms ease-out;
+  }
+}
+
+[swiper] {
+  background: #454545;
+}

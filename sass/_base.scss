@@ -1,14 +1,14 @@
 html,
 body {
-    background: $light;
-    color: $dark;
+    color: $light;
+    background: $dark;
     margin: 0;
     padding: 0;
     font-family: $base-font;
     font-size: 16px;
 }
 
-*, *:before, *:after {box-sizing: border-box;}
+*, *::before, *::after {box-sizing: border-box;}
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
     display: none !important;

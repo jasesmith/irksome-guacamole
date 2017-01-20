@@ -32,7 +32,7 @@ input:not(.exclude) {
         height: 1em;
         line-height: .75;
         text-align: center;
-        &:before {
+        &::before {
             font-family: FontAwesome;
             font-size: 1em;
         }
@@ -41,10 +41,10 @@ input:not(.exclude) {
     // RADIO BUTTONS
     &[type=radio] {
         border-radius: 2em;
-        &:before {
+        &::before {
             content: '\f10c';
         }
-        &:checked:before {
+        &:checked::before {
             content: '\f192';
             // color: $active;
         }
@@ -53,14 +53,14 @@ input:not(.exclude) {
     // CHECKBOXES
     &[type=checkbox] {
         border-radius: .2em;
-        &:before {
+        &::before {
             content: "\f10c"; // circle-o
             opacity: .4;
-        }
-        &:checked:before {
-            content: "\f192"; // dot-circle-o
-            // color: $active;
-            opacity: 1;
+            &:checked {
+                content: "\f192"; // dot-circle-o
+                // color: $active;
+                opacity: 1;
+            }
         }
     }
 
@@ -97,7 +97,7 @@ input:not(.exclude) {
         border-radius: 1em;
         width: 1.75em;
         height: 1em;
-        &:before {
+        &::before {
             left: 0;
             top: 50%;
             width: 1em;
@@ -107,7 +107,7 @@ input:not(.exclude) {
             transform: translate(0, -50%) scale(.7, .7);
         }
         &:checked {
-            &:before {
+            &::before {
                 transform: translate(75%, -50%) scale(.7, .7);
             }
         }
@@ -170,7 +170,7 @@ button:not(.exclude),
         padding-left: 1em;
         padding-right: 1em;
     }
-    &[data-text]:after {
+    &[data-text]::after {
         content: attr(data-text);
         font-size: 1em;
         position: absolute;
